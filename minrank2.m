@@ -8,13 +8,12 @@ i = 0;
 %%
 o = input('\nInforme a ordem da matriz de adjacencia do grafo G: ');
 A = eye(o);
-%% Consulte a funcao digraph(S,T) para entender sobre as lisas S e T.
-%G = digraph(s,t) specifies directed graph edges (s,t) in pairs to represent the source and target nodes. 
-% Para a interpretacao de um grafo de informacoes laterais considere o
-% seguinte exemplo:
-%S = [1 1 1 2 2 3 3 3 4 4 5 5];
-%T = [2 3 5 1 3 1 2 4 3 5 1 4];
-%G = digraph(s,t) 
+%% Consulte a funcao digraph(S,T) para entender sobre as listas S e T.
+% G = digraph(s,t) specifies directed graph edges (s,t) in pairs to represent the source and target nodes. 
+% Para a interpretacao de um grafo de informacoes laterais, considere o seguinte exemplo:
+% S = [1 1 1 2 2 3 3 3 4 4 5 5];
+% T = [2 3 5 1 3 1 2 4 3 5 1 4];
+% G = digraph(S,T) 
 %-> 1 1 1 na lista S, significa que o receptor 1 conhece 3 mensagens,
 %   2 3 5 na lista T, indica quais os indices das mensagens conhecidas. 
 
@@ -73,15 +72,28 @@ end
 %%
 C = g2rref(B);
 l = min(m);
-%% Resolve Sistema 
+%% Resolve Sistema C*X, exibindo o código de índice de comprimento l = min(m)
 x1=sym('x1');   
 x2=sym('x2');
 x3=sym('x3');
 x4=sym('x4');
 x5=sym('x5');
-%x6=sym('x6');
-X=[x1; x2; x3 ; x4; x5];
-C*X;
+%x6=sym('x6'); %Acrescente manualmente a quantidade de variáveis necessárias para o problema
+%x7=sym('x7'); 
+%x8=sym('x8');
+%x9=sym('x9');
+%x10=sym('x10');
+% Escolha o conjunto X que contenha todas as variáveis do problema ou acrescente manualmente, conforme necessário.  
+%X=[x1; x2]; 
+%X=[x1; x2; x3 ]; 
+%X=[x1; x2; x3 ; x4]; 
+X=[x1; x2; x3 ; x4; x5]; 
+%X=[x1; x2; x3 ; x4; x5 ; x6];
+%X=[x1; x2; x3 ; x4; x5 ; x6 ; x7];
+%X=[x1; x2; x3 ; x4; x5 ; x6 ; x7 ; x8];
+%X=[x1; x2; x3 ; x4; x5 ; x6 ; x7 ; x8 ; x9];
+%X=[x1; x2; x3 ; x4; x5 ; x6 ; x7 ; x8 ; x9 ; x10];
+C*X; 
 %%
 fprintf('\nminrank_2(G) = %d  \n\n', l )
 %disp(t)
