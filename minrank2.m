@@ -1,5 +1,5 @@
 %% Encontra todas as matrizes A, tais que A-I e' matriz de um subgrafo aresta induzido de G
-%% 
+%% Nessecita da função g2rref.m (Calcula a matriz na forma escada considerando o corpo finito GF(2))
 close all; clc
 %%
 m = [];
