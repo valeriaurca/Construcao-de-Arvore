@@ -1,7 +1,13 @@
 
 function [A] = g2rref(A)
 [m,n] = size(A);
-
+%G2RREF   Reduced row echelon form in gf(2).
+%   R = RREF(A) produces the reduced row echelon form of A in gf(2).
+%
+%   Class support for input A:
+%      float: with values 0 or 1
+%   Copyright 1984-2005 The MathWorks, Inc. 
+%   $Revision: 5.9.4.3 $  $Date: 2006/01/18 21:58:54 $
 % Loop over the entire matrix.
 i = 1;
 j = 1;
