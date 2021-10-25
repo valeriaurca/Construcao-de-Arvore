@@ -1,5 +1,6 @@
 %% Encontra todas as matrizes A, tais que A-I e' matriz de um subgrafo aresta induzido de G
 %% Nessecita da função g2rref.m (Calcula a matriz na forma escada considerando o corpo finito GF(2))
+%% 
 close all; clc
 %%
 m = [];
@@ -25,7 +26,7 @@ while resp == 'sim'
 S = input('\nDigite a lista S: ');
         for k=1:length(S)
             if S(k) > o
-                disp('\nNenhum valor da lista pode ser maior que a ordem da matriz de adjacencia \n\n');
+                warning('Nenhum valor da lista pode ser maior que a ordem da matriz de adjacencia \n\n');
                 resp = 'sim';
                 break;
             else
@@ -37,12 +38,12 @@ resp = 'sim';
 while resp == 'sim'
     T = input('\nDigite a lista T: ');
     if length(T) ~= length(S)
-        disp(' A lista T deve ter o mesmo comprimento da lista S ')
+        warning(' A lista T deve ter o mesmo comprimento da lista S ')
         resp = 'sim';
     else
         for k=1:length(S)
             if T(k) > o
-                disp(' Nenhum valor da lista pode ser maior que a ordem da matriz de adjacencia');               
+                warning(' Nenhum valor da lista pode ser maior que a ordem da matriz de adjacencia');               
                 resp = 'sim';
                 break;
             else
