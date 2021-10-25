@@ -26,7 +26,7 @@ while resp == 'sim'
 S = input('\nDigite a lista S: ');
         for k=1:length(S)
             if S(k) > o
-                warning('Nenhum valor da lista pode ser maior que a ordem da matriz de adjacencia \n\n');
+                warning('Nenhum valor da lista pode ser maior que a ordem da matriz de adjacencia ');
                 resp = 'sim';
                 break;
             else
