@@ -1,3 +1,4 @@
+<script src="https://gist.github.com/nrenga/3c0ee3af2fb8ca38dcf9113376cae381.js"></script>
 
 function [A] = g2rref(A)
 [m,n] = size(A);
