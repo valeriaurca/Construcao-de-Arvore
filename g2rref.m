@@ -1,7 +1,10 @@
-<script src="https://gist.github.com/nrenga/3c0ee3af2fb8ca38dcf9113376cae381.js"></script>
+% Esta e' uma versao modificada da funcao rref do matlab que calcula
+% forma escalonada com reducaoo de linha em gf (2). Util para codigos lineares.
+% Todos os valores deve ser apenas 0 ou 1 
+% Encontra-se disponível no link: https://gist.github.com/esromneb/652fed46ae328b17e104
+
 
 function [A] = g2rref(A)
-[m,n] = size(A);
 %G2RREF   Reduced row echelon form in gf(2).
 %   R = RREF(A) produces the reduced row echelon form of A in gf(2).
 %
@@ -9,6 +12,9 @@ function [A] = g2rref(A)
 %      float: with values 0 or 1
 %   Copyright 1984-2005 The MathWorks, Inc. 
 %   $Revision: 5.9.4.3 $  $Date: 2006/01/18 21:58:54 $
+
+[m,n] = size(A);
+
 % Loop over the entire matrix.
 i = 1;
 j = 1;
